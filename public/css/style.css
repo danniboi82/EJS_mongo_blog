@@ -1,0 +1,15 @@
+body{
+    margin: 0px;
+}
+
+i.icon{
+    font-size: 2em;
+}
+
+.ui.main.container{
+    margin: 7.0em auto;
+}
+
+.blogTextWrapper{
+    text-align: center;
+}

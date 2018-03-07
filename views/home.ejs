@@ -1,0 +1,28 @@
+<% include ./partials/navbar %>
+    <h1>THIS IS HOME</h1>
+    <div class="ui main container segment">
+        <div class="ui three column grid">
+            <% blogs.forEach(blog=>{ %>
+                <div class="column">
+                    <div class="ui fluid card contentWrapper">
+                        <div class="image">
+                            <img src="<%= blog.image %>" alt="">
+                        </div>
+                        <div class="blogTextWrapper">
+                            <h2>
+                                <%= blog.title %>
+                            </h2>
+                            <p>
+                                <%= blog.content %>
+                            </p>
+                            <span>Created :
+                                <%= blog.created.toDateString() %>
+                            </span>
+                            <a href="/blogs/<%= blog._id %>">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <% include ./partials/footer %>
