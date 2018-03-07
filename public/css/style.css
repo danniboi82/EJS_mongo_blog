@@ -13,3 +13,15 @@ i.icon{
 .blogTextWrapper{
     text-align: center;
 }
+
+.detailsWrapper{
+    text-align: center;
+}
+
+.readMoreButton{
+    margin: 15px auto;
+}
+
+.deleteButton{
+    display: inline;
+}

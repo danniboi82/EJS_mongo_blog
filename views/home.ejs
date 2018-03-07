@@ -18,7 +18,9 @@
                             <span>Created :
                                 <%= blog.created.toDateString() %>
                             </span>
-                            <a href="/blogs/<%= blog._id %>">Read More</a>
+                            <div class='readMoreButton'>
+                                <a class='ui blue button basic' href="/blogs/<%= blog._id %>">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
