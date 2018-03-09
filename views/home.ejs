@@ -1,19 +1,19 @@
 <% include ./partials/navbar %>
     <h1>THIS IS HOME</h1>
-    <div class="ui main container segment">
+    <div class="ui main container">
         <div class="ui three column grid">
             <% blogs.forEach(blog=>{ %>
                 <div class="column">
                     <div class="ui fluid card contentWrapper">
-                        <div class="image">
-                            <img src="<%= blog.image %>" alt="">
+                        <div class="ui image blogPostImgDiv">
+                            <img src="<%= blog.image %>" alt="" class="homeBlogImg">
                         </div>
                         <div class="blogTextWrapper">
                             <h2>
-                                <%= blog.title %>
+                                <%= blog.title.substring(0, 25) %>
                             </h2>
                             <p>
-                                <%= blog.content %>
+                                <%= blog.content.substring(0, 100) %> ...
                             </p>
                             <span>Created :
                                 <%= blog.created.toDateString() %>

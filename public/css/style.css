@@ -25,3 +25,11 @@ i.icon{
 .deleteButton{
     display: inline;
 }
+
+.blogPostImgDiv{
+    height: 150px;
+}
+
+.homeBlogImg{
+    max-height:100%;
+}

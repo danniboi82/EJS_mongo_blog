@@ -22,6 +22,8 @@ app.post('/blogs', (req, res)=>{
     let title = req.body.title;
     let content = req.body.content;
     let image = req.body.image;
+    content = req.sanitize(content);
+
     Blog.create({title : title, content: content, image: image}, (error, newBlog)=>{
         if(error){
             console.log(error, "TRY HARDER");
@@ -61,6 +63,8 @@ app.put('/blogs/:id', (req, res)=>{
     let title = req.body.title;
     let content = req.body.content;
     let image = req.body.image;
+    content = req.sanitize(content);
+
     Blog.findByIdAndUpdate(id, {title: title, content: content, image: image}, (error, updatedBlog)=>{
         if(error){
             console.log("google it");
